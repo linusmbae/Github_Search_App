@@ -1,0 +1,22 @@
+.card-header a
+{
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+}
+.container-fluid
+{
+  background-image: url("src/assets/img/nn.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.jumbotron
+{
+  opacity: 0.9;
+}
+.card-footer
+{
+  text-align: center;
+}
