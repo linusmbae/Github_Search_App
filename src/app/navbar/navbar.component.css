@@ -1,0 +1,23 @@
+.card-header a
+{
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+}
+.container-fluid
+{
+  background-image: url("src/assets/img/nn.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.card-header
+{
+  background-color: gray;
+}
+.right
+{
+  margin-left: 85%;
+  margin-top: -25px;
+}

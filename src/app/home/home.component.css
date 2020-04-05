@@ -1,0 +1,11 @@
+.card-footer
+{
+  text-align: center;
+}
+.container-fluid
+{
+  background-image: url("src/assets/img/nn.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
