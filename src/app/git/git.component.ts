@@ -9,7 +9,7 @@ import { Repos } from '../search-class/repos';
   styleUrls: ['./git.component.css']
 })
 export class GitComponent implements OnInit {
-user:User;
+users:User;
 repos:Repos;
   constructor(private http:HttpClient) { }
 
@@ -17,16 +17,16 @@ repos:Repos;
   {
     interface ApiResponse
     {
-      name:string;
+      login:string;
       public_repos:string;
       gits:string;
-      repos_url:string;
+      html_url:string;
       avatar_url:string;
     }
     this.http.get<ApiResponse>("https://api.github.com/users/linusmbae").subscribe(data=>{
 
-      this.user = new User(data.name,data.avatar_url)
-      this.repos = new Repos(data.public_repos, data.gits, data.repos_url)
+      this.users = new User(data.login,data.avatar_url)
+      this.repos = new Repos(data.public_repos, data.gits, data.html_url)
     })
   }
 

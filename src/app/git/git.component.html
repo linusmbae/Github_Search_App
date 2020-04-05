@@ -10,13 +10,17 @@
         <app-search-form></app-search-form>
       </div>
         <div class="row">
-            <blockquote class="blockquote text-center">
-                <img src="{{user.avatar_url}}" alt="">
-                <p class="mb-0">{{user.name}}</p>
-                <p class="mb-0">{{repos.public_repos}}</p>
-                <a class="btn btn-success" href="{{repos.repos_url}}">Repos</a>
-                <p class="mb-0"></p>
-            </blockquote>
+          <div class="col-md-3">
+            <img src="{{users.avatar_url}}" alt="">
+          </div>
+          <div class="col-md-5">
+            <p>
+            <span class="btn btn-primary">UserName: {{users.login}}</span>
+            <span class="btn btn-success"> Public Repos: {{repos.public_repos}}</span>
+            </p>
+            <a class="btn btn-success" href="{{repos.html_url}}">Repos</a>
+          </div>
+
         </div>
       <div class="card-footer">
           &copy; 2020
