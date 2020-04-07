@@ -13,11 +13,12 @@
       </div>
         <div class="row">
           <div class="col-sm-3">
-            <img *ngIf="users.avatar_url" src="{{users.avatar_url}}" alt="">
+            <img *ngIf="users.avatar_url" src="{{users.avatar_url}}" alt=""><br>
+            <span class="btn-primary" *ngIf="users.login"><strong>{{users.login}}</strong> </span>
           </div>
           <div class="col-md-9">
             <p>
-            <span class="btn btn-primary" *ngIf="users.login">UserName: {{users.login}}</span>
+            <span class="btn btn-primary" *ngIf="users.login">Created on: {{users.created_at|date|uppercase}}</span>
             <span class="btn btn-success" *ngIf="repos.public_repos"> Public Repos: {{repos.public_repos}}</span>
             <span class="btn btn-danger" *ngIf="users.company">Company: {{users.company}}</span>
             </p>

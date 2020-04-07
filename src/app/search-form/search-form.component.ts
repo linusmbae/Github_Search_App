@@ -15,7 +15,7 @@ export class SearchFormComponent implements OnInit {
   repos:Repos;
   private login:string;
   private repos_url:string;
-  newUser = new User("","","");
+  newUser = new User("","","","");
 
     constructor(private http:HttpClient, private serviceService:ServiceService)
     {
@@ -36,10 +36,11 @@ export class SearchFormComponent implements OnInit {
         avatar_url:string;
         repos_url:string;
         company:string;
+        created_at:any;
       }
       this.http.get<ApiResponse>("https://api.github.com/users/" + this.login).subscribe(data=>{
 
-        this.users = new User(data.login,data.avatar_url,data.company)
+        this.users = new User(data.login,data.avatar_url,data.company,data.created_at)
         this.repos = new Repos(data.public_repos, data.gits, data.html_url,data.repos_url)
       })
 
