@@ -10,6 +10,7 @@ import { GitComponent } from './git/git.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { StrikeDateDirective } from './strike-date.directive';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { StrikeDateDirective } from './strike-date.directive';
     GitComponent,
     NavbarComponent,
     HomeComponent,
-    StrikeDateDirective
+    StrikeDateDirective,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
