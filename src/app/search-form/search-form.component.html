@@ -1,6 +1,39 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<form class="form-group">
-    <input class="form-control" type="text" name="name" placeholder="Search...">
-    <button type="submit"><i class="fa fa-search"></i></button>
-</form>
+<div class="container-fluid">
+  <div class="container">
+    <br>
+    <br>
+    <div class="jumbotron">
+      <div class="card-header">
+        <form #searchForm='ngForm' class="form-group">
+            <input  class="form-control" type="text" name="name" placeholder="Search...">
+            <button ><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+        <div class="row">
+          <div class="col-sm-3">
+            <img *ngIf="users.avatar_url" src="{{users.avatar_url}}" alt="">
+          </div>
+          <div class="col-md-9">
+            <p>
+            <span class="btn btn-primary" *ngIf="users.login">UserName: {{users.login}}</span>
+            <span class="btn btn-success" *ngIf="repos.public_repos"> Public Repos: {{repos.public_repos}}</span>
+            <span class="btn btn-danger" *ngIf="users.company">Company: {{users.company}}</span>
+            </p>
+            <a class="btn btn-success" href="{{repos.html_url}}" target="_blank"><strong>Click here to open repos in git</strong> </a>
+          </div>
+
+        </div>
+        <div class="row  text-center">
+          <div class="col-md-4">
+              <h2>Repos</h2>
+              {{more.repos_url}}
+          </div>
+        </div>
+      <div class="card-footer">
+            BlueOakTech &copy; 2020
+      </div>
+    </div>
+  </div>
+</div>

@@ -14,3 +14,36 @@ input
 {
   border-radius: 20px;
 }
+.card-header a
+{
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+}
+.container-fluid
+{
+  background-image: url("src/assets/img/nn.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.jumbotron
+{
+  opacity: 0.9;
+}
+.card-footer
+{
+  text-align: center;
+}
+img
+{
+  border-radius: 20px;
+  border: solid black;
+  height: 80%;
+  width: 50%;
+}
+span
+{
+  margin-left: 5px;
+}
