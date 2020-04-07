@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../search-class/user';
 import { Repos } from '../search-class/repos';
-import { MoreRepos } from "../search-class/more-repos";
 import { ServiceService } from "../search-service/service.service";
 
 @Component({
@@ -14,7 +13,6 @@ export class SearchFormComponent implements OnInit {
 
   users:User;
   repos:Repos;
-  more:MoreRepos;
   private login:string;
   private repos_url:string;
   newUser = new User("","","");
@@ -42,11 +40,9 @@ export class SearchFormComponent implements OnInit {
       this.http.get<ApiResponse>("https://api.github.com/users/" + this.login).subscribe(data=>{
 
         this.users = new User(data.login,data.avatar_url,data.company)
-        this.repos = new Repos(data.public_repos, data.gits, data.html_url)
+        this.repos = new Repos(data.public_repos, data.gits, data.html_url,data.repos_url)
       })
-      this.http.get<ApiResponse>("https://api.github.com/users/" + this.login + "?repos=" + this.repos_url).subscribe(res=>{
-        this.more = new MoreRepos(res.repos_url)
-      })
+
     }
 
 }

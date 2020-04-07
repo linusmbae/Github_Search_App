@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../search-class/user';
 import { Repos } from '../search-class/repos';
-import { MoreRepos } from "../search-class/more-repos";
+import { environment } from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -10,12 +10,11 @@ import { MoreRepos } from "../search-class/more-repos";
 export class ServiceService {
   users:User;
   repos:Repos;
-  more:MoreRepos;
 
   constructor(private http:HttpClient)
   {
     this.users=new User("","","");
-    this.repos=new Repos("","","");
+    this.repos=new Repos("","","","");
   }
 getServices()
   {
