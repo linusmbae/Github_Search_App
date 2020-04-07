@@ -9,6 +9,7 @@ import { SearchFormComponent } from './search-form/search-form.component';
 import { GitComponent } from './git/git.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { StrikeDateDirective } from './strike-date.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomeComponent } from './home/home.component';
     SearchFormComponent,
     GitComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    StrikeDateDirective
   ],
   imports: [
     BrowserModule,
