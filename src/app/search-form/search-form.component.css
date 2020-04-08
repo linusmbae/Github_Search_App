@@ -55,3 +55,17 @@ span
 {
   float: right;
 }
+.row1 .col-md-5
+{
+  border: solid black 1px;
+  border-radius: 5px;
+}
+.row1 .col-md-5 p
+{
+  margin-top: 10px;
+}
+#fRight
+{
+  float: right;
+  width: 15%;
+}

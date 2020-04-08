@@ -24,7 +24,7 @@
             <span class="btn btn-success" *ngIf="service.users.public_repos"> Public Repos: {{service.users.public_repos}}</span>
             <span class="btn btn-danger" *ngIf="service.users.company">Company: {{service.users.company}}</span>
             </p>
-            <a *ngIf="service.users.html_url" class="btn btn-info" href="{{service.users.html_url}}" target="_blank"><strong>Click here to open repos in git</strong> </a>
+            <a *ngIf="service.users.html_url" class="btn btn-info" href="{{service.users.html_url}}" target="_blank"><strong>Open all repos in git</strong> </a>
           </div>
 
         </div>
@@ -36,14 +36,18 @@
           <div class="row row1">
             <div class="col-md-5"  *ngFor="let repo of service.repo1">
                 <p *ngIf="repo.name">
-                  <strong>{{repo.name}}</strong> <a id="right" class="btn btn-sm btn-info" href="{{repo.html_url}}" target="_blank"><strong>View this repo in git</strong> </a>
+                  <strong>{{repo.name}}</strong> <a id="right" class="btn btn-sm btn-outline-info" href="{{repo.html_url}}" target="_blank"><strong>View this repo in git</strong> </a>
 
                 </p>
-                <p>
-                  Forks: {{repo.forks}}
+                <p *ngIf="repo.forks">
+                  Forks: <strong>{{repo.forks}}</strong>
                 </p>
             </div>
           </div>
+          <br>
+          <a class="btn btn-warning" href="git" id="fRight"><strong>Top</strong> </a>
+          <br>
+          <hr>
       <div class="card-footer">
             BlueOakTech &copy; 2020
       </div>
