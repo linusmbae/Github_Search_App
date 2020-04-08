@@ -12,34 +12,35 @@
             <button ><i class="fa fa-search"></i></button>
         </form>
       </div>
+      <br>
         <div class="row">
           <div class="col-sm-3">
-            <img *ngIf="users.avatar_url" src="{{users.avatar_url}}" alt=""><br>
-            <span class="btn-primary" *ngIf="users.login"><strong>{{users.login}}{{users.created_at|dateCount}}</strong> </span>
+            <img *ngIf="service.users.avatar_url" src="{{service.users.avatar_url}}" alt=""><br>
+            <span class="btn-default" *ngIf="service.users.login"><strong>{{service.users.login}}</strong> </span>
           </div>
           <div class="col-md-9">
             <p>
-            <span class="btn btn-primary" *ngIf="users.login">Created on: {{users.created_at|date|uppercase}}</span>
-            <span class="btn btn-success" *ngIf="users.public_repos"> Public Repos: {{users.public_repos}}</span>
-            <span class="btn btn-danger" *ngIf="users.company">Company: {{users.company}}</span>
+            <span class="btn btn-primary" *ngIf="service.users.login">Created on: {{service.users.created_at|date|uppercase}}</span>
+            <span class="btn btn-success" *ngIf="service.users.public_repos"> Public Repos: {{service.users.public_repos}}</span>
+            <span class="btn btn-danger" *ngIf="service.users.company">Company: {{service.users.company}}</span>
             </p>
-            <a class="btn btn-info" href="{{users.html_url}}" target="_blank"><strong>Click here to open repos in git</strong> </a>
+            <a *ngIf="service.users.html_url" class="btn btn-info" href="{{service.users.html_url}}" target="_blank"><strong>Click here to open repos in git</strong> </a>
           </div>
 
         </div>
 
 
-            <h2 class="text-center">Repos</h2>
+            <h2 class="text-center">Repositories</h2>
             <hr>
             <br>
           <div class="row row1">
-            <div class="col-md-5" *ngFor="let repo of service.repo1">
-                <p>
-                  {{repo.name}}<a id="right" class="btn btn-sm btn-info" href="{{repo.html_url}}" target="_blank">View this repo in git</a>
+            <div class="col-md-5"  *ngFor="let repo of service.repo1">
+                <p *ngIf="repo.name">
+                  <strong>{{repo.name}}</strong> <a id="right" class="btn btn-sm btn-info" href="{{repo.html_url}}" target="_blank"><strong>View this repo in git</strong> </a>
 
                 </p>
                 <p>
-                  Commits:
+                  Forks: {{repo.forks}}
                 </p>
             </div>
           </div>
