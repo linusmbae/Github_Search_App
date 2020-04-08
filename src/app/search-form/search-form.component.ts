@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { User } from '../search-class/user';
 import { Repos } from '../search-class/repos';
 import { ServiceService } from "../search-service/service.service";
+import { environment } from "../../environments/environment";
 
 @Component({
   selector: 'app-search-form',
@@ -12,21 +13,18 @@ import { ServiceService } from "../search-service/service.service";
 export class SearchFormComponent implements OnInit {
 
   users:User;
-  repos:Repos;
   private login:string;
-  private repos_url:string;
-  newUser = new User("","","","");
+  newUser = new User("","","","","","","");
 
-    constructor(private http:HttpClient, private serviceService:ServiceService)
+    constructor(private http:HttpClient, public service:ServiceService)
     {
-      this.login='linusmbae',
-      this.repos_url='Adan_Wataz'
+      this.login='linusmbae'
     }
 
     ngOnInit(): void
     {
-      this.serviceService.getServices()
-      // this.login=this.serviceService.users
+      this.service.getRepos()
+
       interface ApiResponse
       {
         login:string;
@@ -34,14 +32,13 @@ export class SearchFormComponent implements OnInit {
         gits:string;
         html_url:string;
         avatar_url:string;
-        repos_url:string;
         company:string;
         created_at:any;
       }
-      this.http.get<ApiResponse>("https://api.github.com/users/" + this.login).subscribe(data=>{
+      this.http.get<ApiResponse>("https://api.github.com/users/" + this.login + "token=" + environment.apiKey).subscribe(data=>{
 
-        this.users = new User(data.login,data.avatar_url,data.company,data.created_at)
-        this.repos = new Repos(data.public_repos, data.gits, data.html_url,data.repos_url)
+        this.users = new User(data.login,data.avatar_url,data.company,data.created_at,data.public_repos, data.gits, data.html_url)
+
       })
 
     }

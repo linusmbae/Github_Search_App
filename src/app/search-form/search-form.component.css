@@ -28,7 +28,7 @@ input
   background-size: cover;
   background-attachment: fixed;
 }
-.jumbotron
+.jumbo
 {
   opacity: 0.9;
 }
@@ -46,4 +46,12 @@ img
 span
 {
   margin-left: 5px;
+}
+.row1
+{
+  margin-left: 15%;
+}
+#right
+{
+  float: right;
 }
