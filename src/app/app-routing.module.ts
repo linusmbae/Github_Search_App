@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { GitComponent } from "./git/git.component";
+import { SearchFormComponent } from "./search-form/search-form.component";
 import { HomeComponent } from "./home/home.component";
 
 const routes: Routes = [
-  {path:'git', component:GitComponent},
+  {path:'searchForm', component:SearchFormComponent},
   {path:'home', component:HomeComponent},
 ];
 

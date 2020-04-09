@@ -6,7 +6,6 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchFormComponent } from './search-form/search-form.component';
-import { GitComponent } from './git/git.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { SelectedDirective } from './selected.directive';
@@ -15,7 +14,6 @@ import { SelectedDirective } from './selected.directive';
   declarations: [
     AppComponent,
     SearchFormComponent,
-    GitComponent,
     NavbarComponent,
     HomeComponent,
     SelectedDirective
