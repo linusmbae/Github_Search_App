@@ -1,5 +1,5 @@
 # Git Search App
-[Git Search App](https://github.com/linusmbae/Github_Search_App)
+[Git Search App](https://github.com/linusmbae/Github_Search_App/home)
 
 ## AUthor
 Linus Mutugi Mbae.
