@@ -8,13 +8,18 @@ import { ServiceService } from "../search-service/service.service";
 })
 export class SearchFormComponent implements OnInit {
 
-
+login:string;
     constructor(public service:ServiceService) { }
+    seachUser()
+    {
+      this.service.updateUser(this.login);
+      this.service.getRepos()
+      this.service.getUser()
+    }
 
     ngOnInit(): void
     {
-      this.service.getRepos()
-      this.service.getUser()
+
 
 
     }

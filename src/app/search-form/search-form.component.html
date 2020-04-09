@@ -8,7 +8,7 @@
     <div class="jumbotron jumbo">
       <div class="card-header">
         <form #searchForm='ngForm' class="form-group">
-            <input  class="form-control" type="text" name="name" placeholder="Search...">
+            <input  class="form-control" type="text" name="login" [(ngModel)]='login' (keyup)='seachUser()' placeholder="Search...">
             <button ><i class="fa fa-search"></i></button>
         </form>
       </div>

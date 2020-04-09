@@ -69,4 +69,9 @@ getRepos()
 return promise
 
   }
+
+  updateUser(login:string)
+  {
+    this.login=login;
+  }
 }
