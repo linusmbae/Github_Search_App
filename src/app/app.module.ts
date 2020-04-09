@@ -9,6 +9,7 @@ import { SearchFormComponent } from './search-form/search-form.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { SelectedDirective } from './selected.directive';
+import { DatePipe } from './date.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SelectedDirective } from './selected.directive';
     SearchFormComponent,
     NavbarComponent,
     HomeComponent,
-    SelectedDirective
+    SelectedDirective,
+    DatePipe
   ],
   imports: [
     BrowserModule,
