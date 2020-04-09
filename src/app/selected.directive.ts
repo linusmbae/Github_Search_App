@@ -1,9 +1,9 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: '[appStrikeDate]'
+  selector: '[appSelected]'
 })
-export class StrikeDateDirective {
+export class SelectedDirective {
 
   constructor() { }
 

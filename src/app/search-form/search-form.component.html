@@ -6,10 +6,12 @@
     <br>
     <br>
     <div class="jumbotron jumbo">
+
+      <b>{{today | date:'shortTime'}}</b>
+      <br>
       <div class="card-header">
         <form #searchForm='ngForm' class="form-group">
-            <input  class="form-control" type="text" name="login" [(ngModel)]='login' (keyup)='seachUser()' placeholder="Search...">
-            <button ><i class="fa fa-search"></i></button>
+            <input  class="form-control" type="text" name="login" [(ngModel)]='login' (keyup)='seachUser()' placeholder="Filter By UserName...">
         </form>
       </div>
       <br>
@@ -35,6 +37,7 @@
             <br>
           <div class="row row1">
             <div class="col-md-5"  *ngFor="let repo of service.repo1">
+
                 <p *ngIf="repo.name">
                   <strong>{{repo.name}}</strong> <a id="right" class="btn btn-sm btn-outline-info" href="{{repo.html_url}}" target="_blank"><strong>View this repo in git</strong> </a>
 
@@ -45,8 +48,8 @@
             </div>
           </div>
           <br>
-          <a class="btn btn-warning" href="git" id="fRight"><strong>Top</strong> </a>
-          <br>
+          <!-- <a class="btn btn-warning" href="git" id="fRight"><strong>Top</strong> </a>
+          <br> -->
           <hr>
       <div class="card-footer">
             BlueOakTech &copy; 2020

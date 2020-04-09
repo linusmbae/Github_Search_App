@@ -9,8 +9,7 @@ import { SearchFormComponent } from './search-form/search-form.component';
 import { GitComponent } from './git/git.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-import { StrikeDateDirective } from './strike-date.directive';
-import { DateCountPipe } from './date-count.pipe';
+import { SelectedDirective } from './selected.directive';
 
 @NgModule({
   declarations: [
@@ -19,8 +18,7 @@ import { DateCountPipe } from './date-count.pipe';
     GitComponent,
     NavbarComponent,
     HomeComponent,
-    StrikeDateDirective,
-    DateCountPipe
+    SelectedDirective
   ],
   imports: [
     BrowserModule,

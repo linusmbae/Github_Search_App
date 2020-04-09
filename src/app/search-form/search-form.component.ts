@@ -8,7 +8,8 @@ import { ServiceService } from "../search-service/service.service";
 })
 export class SearchFormComponent implements OnInit {
 
-login:string;
+    login:string;
+    today=new Date();
     constructor(public service:ServiceService) { }
     seachUser()
     {

@@ -60,8 +60,7 @@ getRepos()
     },
     error=>
     {
-      this.users.login="BlueOakTech"
-      this.users.company="BlueOakTechnologies"
+      
       reject(error)
 
     })

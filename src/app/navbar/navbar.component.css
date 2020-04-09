@@ -26,3 +26,7 @@ a :hover
   background-color: white;
   color: red;
 }
+a
+{
+  cursor: progress;
+}
