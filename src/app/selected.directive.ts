@@ -1,10 +1,20 @@
-import { Directive } from '@angular/core';
+import { Directive,ElementRef,HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appSelected]'
 })
 export class SelectedDirective {
 
-  constructor() { }
+  constructor(private select:ElementRef) { }
 
+  @HostListener("click") onClicks()
+  {
+   this.textSelect("gold")
+  }
+
+  private textSelect(action:string)
+  {
+     this.select.nativeElement.style.backgroundColor=action;
+
+   }
 }
