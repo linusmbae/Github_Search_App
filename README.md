@@ -1,5 +1,5 @@
 # Git Search App
-[Git Search App](https://github.com/linusmbae/Github_Search_App/home)
+[Git Search App](https://github.com/linusmbae/Github_Search_App)
 
 ## AUthor
 Linus Mutugi Mbae.
@@ -23,7 +23,7 @@ Open my github repository
 click on the live link to view the project/Github_Search_App.
 
 ## Link to site
-This is a live link to my site. [Github_Search_App](https://linusmbae.github.io/Github_Search_App/)
+This is a live link to my site. [Github_Search_App](https://linusmbae.github.io/Github_Search_App/home)
 
 ## Reach me
 [Email](linusmutugi5178@gmail.com)
